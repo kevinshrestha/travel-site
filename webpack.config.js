@@ -9,6 +9,8 @@ const postCSSPlugins = [
   require('postcss-simple-vars'),
   //
   require('postcss-nested'),
+  //converts hex colors to rgba
+  require('postcss-hexrgba'),
   // Autoprefixer will use the data based on current browser 
   // popularity and property support to apply prefixes for you.
   require('autoprefixer')
