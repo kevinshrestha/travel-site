@@ -9,13 +9,12 @@
     @mixin atMedium {
       float:right;
     }
-    
   }
 
   ul {
     margin: 0;
     padding: 0;
-    @mixin clearfix
+    @mixin clearfix;
   }
 
   li {
