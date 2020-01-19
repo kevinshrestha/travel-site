@@ -39,13 +39,14 @@
   <div class="large-hero">
 
     <picture>
-      <source srcset="assets/images/hero--large.jpg 1920w, assets/images/hero--large-hi-dpi.jpg 3840w"
+      <source data-srcset="assets/images/hero--large.jpg 1920w, assets/images/hero--large-hi-dpi.jpg 3840w"
         media="(min-width: 1380px)">
-      <source srcset="assets/images/hero--medium.jpg 1380w, assets/images/hero--medium-hi-dpi.jpg 2760w"
+      <source data-srcset="assets/images/hero--medium.jpg 1380w, assets/images/hero--medium-hi-dpi.jpg 2760w"
         media="(min-width: 990px)">
-      <source srcset="assets/images/hero--small.jpg 990w, assets/images/hero--small-hi-dpi.jpg 1980w"
+      <source data-srcset="assets/images/hero--small.jpg 990w, assets/images/hero--small-hi-dpi.jpg 1980w"
         media="(min-width: 640px)">
-      <img srcset="assets/images/hero--smaller.jpg 640w, assets/images/hero--smalller-hi-dpi.jpg 1280"
+      <img class="lazyload"
+        data-srcset="assets/images/hero--smaller.jpg 640w, assets/images/hero--smalller-hi-dpi.jpg 1280"
         alt="Coastal view of ocean and mountiains" class="large-hero__image">
     </picture>
 
@@ -185,8 +186,8 @@
         <div class="row__large-4">
           <div class="testimonial">
             <div class="testimonial__photo">
-              <img sizes="160px"
-                srcset="assets/images/testimonial-jane.jpg 160w, assets/images/testimonial-jane-hi-dpi.jpg 320w"
+              <img class="lazyload" sizes="160px"
+                data-srcset="assets/images/testimonial-jane.jpg 160w, assets/images/testimonial-jane-hi-dpi.jpg 320w"
                 alt="Jane Doe">
             </div>
             <h3 class="testimonial__title">Jane Doe</h3>
@@ -203,8 +204,8 @@
         <div class="row__large-4">
           <div class="testimonial">
             <div class="testimonial__photo">
-              <img sizes="160px"
-                srcset="assets/images/testimonial-john.jpg 160w, assets/images/testimonial-john-hi-dpi.jpg 320w"
+              <img class="lazyload" sizes="160px"
+                data-srcset="assets/images/testimonial-john.jpg 160w, assets/images/testimonial-john-hi-dpi.jpg 320w"
                 alt="John Smith">
             </div>
             <h3 class="testimonial__title">John Smith</h3>
@@ -220,8 +221,8 @@
         <div class="row__large-4">
           <div class="testimonial testimonial--last">
             <div class="testimonial__photo">
-              <img sizes="160px"
-                srcset="assets/images/testimonial-cat.jpg 160w, assets/images/testimonial-cat-hi-dpi.jpg 320w"
+              <img class="lazyload" sizes="160px"
+                data-srcset="assets/images/testimonial-cat.jpg 160w, assets/images/testimonial-cat-hi-dpi.jpg 320w"
                 alt="Cat McKitty">
             </div>
             <h3 class="testimonial__title">Cat McKitty</h3>
