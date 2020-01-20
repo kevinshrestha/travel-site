@@ -3,7 +3,10 @@ import 'lazysizes'
 import MobileMenu from './modules/MobileMenu'
 import RevealOnScroll from './modules/RevealOnScroll'
 import StickyHeader from './modules/StickyHeader'
+import ClientArea from './modules/ClientArea'
+
 //let is the new instance of the class
+new ClientArea();
 new MobileMenu();
 new StickyHeader();
 // using let, get in the habit of storing these into variables if your different modules would need to interact with each other
