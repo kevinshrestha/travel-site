@@ -1,5 +1,4 @@
 import Axios from 'axios'
-import { remove } from 'fs-extra'
 
 class ClientArea {
     constructor() {
