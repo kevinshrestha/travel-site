@@ -52,7 +52,18 @@ let config = {
   plugins: pages,
   module: {
     rules: [
-      cssConfig
+      cssConfig,
+      {
+        test: /\.js$/,
+        //we ignore the node modules files the we don't want to worry about converting or transpiling
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-react','@babel/preset-env']
+          }
+        }
+      }
     ]
   }
 }
@@ -80,17 +91,6 @@ if (currentTask == 'dev') {
 //build config files
 if (currentTask == 'build') {
   //this rule only applies to javascript files
-  config.module.rules.push({
-    test: /\.js$/,
-    //we ignore the node modules files the we don't want to worry about converting or transpiling
-    exclude: /(node_modules)/,
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: ['@babel/preset-env']
-      }
-    }
-  })
 
   cssConfig.use.unshift(MiniCssExtractPlugin.loader)
   postCSSPlugins.push(require('cssnano'))
